@@ -30,6 +30,7 @@ A hypothetical RRE workflow is demonstrated below:
 1. Clone the repo:
    ```bash
    git clone https://github.com/jumpycastle/rre-burp.git
+   ``` 
 2. In Burp Suite:
 * Go to Extensions > Add
 * Load the .py file manually
