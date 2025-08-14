@@ -48,7 +48,7 @@ A hypothetical RRE workflow is demonstrated below:
 6. Go to Extensions > Output to view the recursive trace.
 7. For vulnerable apps, you’ll see a chain of unauthenticated or low-trust API calls that ultimately lead to a high-value response. The GIF below demonstrates the flow.
 
-![RRE Full Trace GIF](https://cdn-images-1.medium.com/v2/resize:fit:640/1*fSNRLWpQw03LLn_3X1DYDw.gif)
+![RRE Full Trace GIF](media/rre-full-trace.gif)
 
 8. Build your exploit chain by chaining together the discovered APIs using only the low-trust inputs. This simulates how a real attacker could bypass authentication by abusing the same business logic flow.
 ---
@@ -57,7 +57,7 @@ A hypothetical RRE workflow is demonstrated below:
 
 What happens when you scale this?
 
-![Streamageddon GIF](https://cdn-images-1.medium.com/v2/resize:fit:640/1*nRBfglYkDTRHvM_evALyVg.gif)
+![Streamageddon GIF](media/streamageddon.gif)
 
 ---
 ## 🛠 Optional: Configure Shannon Entropy
