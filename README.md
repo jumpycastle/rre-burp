@@ -6,7 +6,7 @@ References:
 * WIRED article: https://www.wired.com/story/corporate-livestreams-exposed-search-tool/
 
 
-![RRE Logo](https://cdn-images-1.medium.com/v2/resize:fit:640/1*P253DH2ItP3gFkA28N_ZnQ.png)
+![RRE Logo](media/RRE-darkmode.png)
 
 ## ⚡TLDR
 
