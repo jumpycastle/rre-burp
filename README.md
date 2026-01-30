@@ -120,7 +120,7 @@ During recursive chain discovery, RRE v2 provides best-effort auth-context signa
 * Burp-friendly design
 Updated internals and conservative defaults to better align with Burp Suite BApp Store quality expectations, including bounded memory usage and improved UI responsiveness for large projects.
 
-⚡ Quick Start (RRE v2)
+⚡ Quick Start (RRE v2 + Stream Finder)
 
 1. Load the latest RRE extension.
 
@@ -137,3 +137,6 @@ Optionally, click *Types toggle* to narrow discovery to specific manifest or med
 
 7. Review the RRE Console output to identify low-trust inputs (e.g., non-auth related values) that lead to high-value outputs (e.g., video stream, entitlement).
 
+Video POC:
+
+![StreamFinder GIF](media/streamfinder.gif)
