@@ -97,4 +97,43 @@ and adjust the value:
 ```python
 entropy > 3.0
 ```
+# 🚀 RRE v2: Stream Finder
+
+RRE v2 introduces Stream Finder, a lightweight helper module that improves the RRE workflow by automatically identifying streaming-related endpoints that are often good candidates for recursive request analysis.
+
+Rather than manually searching Burp’s full HTTP history, Stream Finder surfaces relevant media and manifest URLs in real time, allowing testers to move quickly from discovery to RRE enumeration.
+
+## What’s New in RRE v2
+
+* Automatic stream discovery
+Identifies common streaming manifests and media types (e.g., HLS/DASH manifests, progressive media, segments) observed in Proxy traffic.
+
+* Configurable real-time filtering
+Use Types [toggle] to enable or disable specific manifest or media types depending on what you’re targeting — or leave all types enabled for broad discovery.
+
+* One-click handoff to Repeater
+Discovered candidates can be sent directly to Repeater as starting points for RRE chain discovery.
+
+* Auth-signal annotations (heuristic)
+During recursive chain discovery, RRE v2 provides best-effort auth-context signals to help analysts reason about trust boundaries. These signals are informational only and not definitive authentication checks.
+
+* Burp-friendly design
+Updated internals and conservative defaults to better align with Burp Suite BApp Store quality expectations, including bounded memory usage and improved UI responsiveness for large projects.
+
+⚡ Quick Start (RRE v2)
+
+1. Load the latest RRE extension.
+
+2. Browse the target application normally with Burp Proxy enabled.
+
+3. Open the Stream Finder tab to observe discovered streaming-related endpoints.
+Optionally, click *Types toggle* to narrow discovery to specific manifest or media types — or leave all types enabled for broad discovery.
+
+4. Review discovered candidates and right-click → Send to Repeater on a promising entry.
+
+5. In Repeater, highlight a candidate entitlement or stream-related parameter.
+
+6. Right-click and run RRE → Full Chain Discovery to enumerate the recursive request chain.
+
+7. Review the RRE Console output to identify low-trust inputs (e.g., non-auth related values) that lead to high-value outputs (e.g., video stream, entitlement).
 
